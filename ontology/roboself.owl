@@ -1,0 +1,420 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/ieee1872-owl/cora#"
+     xml:base="http://purl.org/ieee1872-owl/cora"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:annotation="http://purl.org/ieee1872-owl/annotation#">
+    <owl:Ontology rdf:about="http://aslab.org/asys/roboself">
+        <owl:versionIRI rdf:resource="http://aslab.org/asys/roboself/1.0.0"/>
+        <dc:contributor xml:lang="en">Esther Aguado</dc:contributor>
+        <dc:contributor xml:lang="en">Koro Irusta</dc:contributor>
+        <dc:creator xml:lang="en">Ricardo Sanz</dc:creator>
+        <dc:rights xml:lang="en">RoboSElf Ontology copyright is property of their aurthors.
+
+The ontology license is CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)</dc:rights>
+        <rdfs:comment xml:lang="en">This is the OWL implementation of RoboSelf Ontology.</rdfs:comment>
+        <rdfs:seeAlso>https://github.com/rsanz/roboself</rdfs:seeAlso>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/annotation#ieee18722015AxiomNumber -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ieee1872-owl/annotation#ieee18722015AxiomNumber"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://aslab.org/asys/roboself-bare#agentRobot -->
+
+    <owl:ObjectProperty rdf:about="http://aslab.org/asys/roboself-bare#agentRobot">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#agent"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://aslab.org/asys/roboself-bare#agentRobot"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#agent"/>
+        <annotation:ieee18722015AxiomNumber>7.4.1</annotation:ieee18722015AxiomNumber>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://aslab.org/asys/roboself-bare#agentRobot"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:comment>7.4.3</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://aslab.org/asys/roboself-bare#robotPart -->
+
+    <owl:ObjectProperty rdf:about="http://aslab.org/asys/roboself-bare#robotPart">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#part"/>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://aslab.org/asys/roboself-bare#robotPart"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#part"/>
+        <annotation:ieee18722015AxiomNumber>7.2.1</annotation:ieee18722015AxiomNumber>
+    </owl:Axiom>
+    
+
+
+    <!-- http://aslab.org/asys/roboself-bare#support -->
+
+    <owl:ObjectProperty rdf:about="http://aslab.org/asys/roboself-bare#support"/>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#agent -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ieee1872-owl/sumo-cora#agent"/>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#part -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ieee1872-owl/sumo-cora#part"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Actuator -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Actuator">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Authority -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Authority">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#AutobiographicalSelf -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#AutobiographicalSelf">
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboself#Memory"/>
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboself#Self"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Awareness -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Awareness">
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboself#Perception"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Communication -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Communication">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Core-Self -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Core-Self">
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboself#Self"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Environment -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Environment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Goal -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Goal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Identity -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Identity">
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboself#Self"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Learning -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Learning">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Memory -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Memory">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Object -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Object">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Object-Awareness -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Object-Awareness">
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboself#Awareness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Other-Awareness -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Other-Awareness">
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboself#Awareness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Perception -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Perception">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Proto-Self -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Proto-Self">
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboself#Self"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Self -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Self">
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboself#Subject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Self-Awareness -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Self-Awareness">
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboself#Awareness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Sensor -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Sphere-of-Control -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Sphere-of-Control">
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboself#Authority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#State -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#State">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Subject -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Subject">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Task -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Task">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself#Time -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself#Time">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aslab.org/asys/roboself-bare#RobotGroup -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself-bare#RobotGroup">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Group"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://aslab.org/asys/roboself-bare#RobotGroup"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Group"/>
+        <annotation:ieee18722015AxiomNumber>7.5.1</annotation:ieee18722015AxiomNumber>
+    </owl:Axiom>
+    
+
+
+    <!-- http://aslab.org/asys/roboself-bare#RoboticEnvironment -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself-bare#RoboticEnvironment">
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboself#Environment"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://aslab.org/asys/roboself-bare#RoboticEnvironment"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://aslab.org/asys/roboself#Environment"/>
+        <annotation:ieee18722015AxiomNumber>7.7.1</annotation:ieee18722015AxiomNumber>
+    </owl:Axiom>
+    
+
+
+    <!-- http://aslab.org/asys/roboself-bare#RoboticSystem -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboself-bare#RoboticSystem">
+        <rdfs:subClassOf rdf:resource="http://aslab.org/asys/roboselfx#ArtificialSystem"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://aslab.org/asys/roboself-bare#RoboticSystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://aslab.org/asys/roboselfx#ArtificialSystem"/>
+        <annotation:ieee18722015AxiomNumber>7.6.1</annotation:ieee18722015AxiomNumber>
+    </owl:Axiom>
+    
+
+
+    <!-- http://aslab.org/asys/roboselfx#ArtificialSystem -->
+
+    <owl:Class rdf:about="http://aslab.org/asys/roboselfx#ArtificialSystem">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/cora-bare#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/cora-bare#System -->
+
+    <owl:Class rdf:about="http://purl.org/ieee1872-owl/cora-bare#System">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Abstract -->
+
+    <owl:Class rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Entity -->
+
+    <owl:Class rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Group -->
+
+    <owl:Class rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Group"/>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Object -->
+
+    <owl:Class rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Process -->
+
+    <owl:Class rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Process">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
